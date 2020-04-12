@@ -17,16 +17,15 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@PostMapping(value="/save")
+	@PostMapping(value = "/save")
 	public User saveUser(@RequestBody User user) {
 		return userService.addUser(user);
 
 	}
-	
-	@GetMapping(value="/getUsers")
-public List<User> findAllUsers(){
-return		 userService.getUsers();
+
+	@GetMapping(value = "/getUsers")
+	public List<User> findAllUsers() {
+		return userService.getUsers();
 	}
-	
-	
+
 }
