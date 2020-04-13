@@ -30,6 +30,7 @@ public class UserService {
 	}
 
 	public void deletUser(User user) {
+		System.out.println("dsiplay deleted user : " +user);
 		repository.delete(user);
 	}
 }
